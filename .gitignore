@@ -3,3 +3,7 @@ src/TestFrame.java
 src/TestFrame.form
 out/production/wordl/MainFrame$1.class
 out/production/wordl/TestFrame$1.class
+out/artifacts
+out/production/wordl/META-INF
+out/production/wordl/MainFrame.class
+out/production/wordl/TestFrame.class
