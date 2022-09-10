@@ -128,11 +128,6 @@ public class MainFrame extends JFrame{
         JLabel[][] verifiers = {verifiers1, verifiers2, verifiers3, verifiers4, verifiers5, verifiers6};
 
 
-        //JLabel[] verifiers = {verifier1A, verifier1B, verifier1C, verifier1D, verifier1E, verifier2A, verifier2B, verifier2C, verifier2D, verifier2E, verifier3A, verifier3B, verifier3C, verifier3D,
-        //        verifier3E, verifier4A, verifier4B, verifier4C, verifier4D, verifier4E, verifier5A, verifier5B, verifier5C, verifier5D, verifier5E, verifier6A, verifier6B, verifier6C, verifier6D,
-        //        verifier6E};
-
-
         // Panel Setup
         for (int i = 0; i <= 5; i++) {
             textFields[i].setPreferredSize(textFieldDimension);
@@ -183,19 +178,21 @@ public class MainFrame extends JFrame{
                     textFields[row].setText("");
                 }
 
-                boolean wordInList = false;
+//                COMMENTED OUT BECAUSE VERY LESS WORDS IN `wordList`
 
-                for (String wordToMatch : wordList) {
-                    if (word.equalsIgnoreCase(wordToMatch)) {
-                        wordInList = true;
-                        break;
-                    }
-                }
+//                boolean wordInList = false;
+//
+//                for (String wordToMatch : wordList) {
+//                    if (word.equalsIgnoreCase(wordToMatch)) {
+//                        wordInList = true;
+//                        break;
+//                    }
+//                }
 
-                if (!(wordInList)) {
-                    JOptionPane.showMessageDialog(panel1, "Word not in list", "Error", JOptionPane.ERROR_MESSAGE);
-                    textFields[row].setText("");
-                }
+//                if (!(wordInList)) {
+//                    JOptionPane.showMessageDialog(panel1, "Word not in list", "Error", JOptionPane.ERROR_MESSAGE);
+//                    textFields[row].setText("");
+//                }
 
                 else if (word.equalsIgnoreCase(wordToGuess)) {
                     textFields[row].setText(word.toUpperCase());
