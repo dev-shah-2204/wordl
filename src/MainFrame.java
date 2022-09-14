@@ -263,11 +263,18 @@ public class MainFrame extends JFrame{
                         }
                     }
 
-
                     textFields[row].setText(word.toUpperCase().replace("", " ").trim());
                     textFields[row].setVisible(false);
+
                     row++;
-                    textFields[row].setEnabled(true);
+                    if (row < 6) {
+                        textFields[row].setEnabled(true);
+                    }
+                    else {
+                        JOptionPane.showMessageDialog(panel1, "The word was '" + wordToGuess + "'", "You couldn't guess the word", JOptionPane.INFORMATION_MESSAGE);
+                        setEnabled(false);
+                        setVisible(false);
+                    }
 
                     // Resetting the booleans
                     for (int i = 0; i <= 4; i++) {
