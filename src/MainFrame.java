@@ -178,21 +178,21 @@ public class MainFrame extends JFrame{
                     textFields[row].setText("");
                 }
 
-//                COMMENTED OUT BECAUSE VERY LESS WORDS IN `wordList`
+/*
+                COMMENTED OUT BECAUSE VERY LESS WORDS IN `wordList`
+                boolean wordInList = false;
 
-//                boolean wordInList = false;
-//
-//                for (String wordToMatch : wordList) {
-//                    if (word.equalsIgnoreCase(wordToMatch)) {
-//                        wordInList = true;
-//                        break;
-//                    }
-//                }
-
-//                if (!(wordInList)) {
-//                    JOptionPane.showMessageDialog(panel1, "Word not in list", "Error", JOptionPane.ERROR_MESSAGE);
-//                    textFields[row].setText("");
-//                }
+                for (String wordToMatch : wordList) {
+                    if (word.equalsIgnoreCase(wordToMatch)) {
+                        wordInList = true;
+                        break;
+                    }
+                }
+                if (!(wordInList)) {
+                    JOptionPane.showMessageDialog(panel1, "Word not in list", "Error", JOptionPane.ERROR_MESSAGE);
+                    textFields[row].setText("");
+                }
+*/
 
                 else if (word.equalsIgnoreCase(wordToGuess)) {
                     textFields[row].setText(word.toUpperCase());
