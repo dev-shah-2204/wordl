@@ -61,8 +61,7 @@ public class MainFrame extends JFrame{
 
     public MainFrame() {
         // Rules
-        ImageIcon icon = new ImageIcon("./wordle.png");
-
+        ImageIcon logo = new ImageIcon("./wordle.png");
         JOptionPane rules = new JOptionPane("""
                         You're supposed to guess the 5-letter word in 6 tries
 
@@ -83,7 +82,7 @@ public class MainFrame extends JFrame{
                         "U" is  not in the word at any spot.""");
 
         rules.setMessageType(JOptionPane.INFORMATION_MESSAGE);
-        rules.setIcon(icon);
+        rules.setIcon(logo);
 
         JPanel buttonPanel = (JPanel) rules.getComponent(1);
         JButton okButton = (JButton) buttonPanel.getComponent(0);
@@ -181,7 +180,7 @@ public class MainFrame extends JFrame{
                 }
 
 /*
-                COMMENTED OUT BECAUSE VERY LESS WORDS IN `wordList`
+                COMMENTED OUT BECAUSE VERY FEW WORDS IN `wordList`
                 boolean wordInList = false;
 
                 for (String wordToMatch : wordList) {
@@ -205,7 +204,7 @@ public class MainFrame extends JFrame{
                         verifiers[row][i].setText((String.valueOf(word.charAt(i)).toUpperCase()));
                     }
 
-                    JOptionPane.showMessageDialog(panel1, "You guessed the word", "Congrats", JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(panel1, "You guessed the word", "Noice", JOptionPane.INFORMATION_MESSAGE, logo);
 
                     setEnabled(false);
                     setVisible(false);
