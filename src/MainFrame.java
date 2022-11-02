@@ -61,6 +61,7 @@ public class MainFrame extends JFrame{
 
     public MainFrame() {
         // Rules
+        ImageIcon icon = new ImageIcon("./wordle.png");
         JOptionPane.showMessageDialog(
                 panel1,
                 """
@@ -72,21 +73,18 @@ public class MainFrame extends JFrame{
 
                         Examples:
 
-                        Input: VAGUE
-                        Output: _ _ _ _ _ (All underscores are gray boxes)
-                        None of the letters are in the word
-
-                        Input: WEARY
-                        Output: W _ _ _ _ (W is in a green box)
-                        The letter W is in the word and in the correct spot
-
-                        Input: pills
-                        Output: _ I _ _ _ (I is in a yellow box)
-                        The letter i is in the word but in the wrong spot
+                        
+                        🆆 🄴 🄰 🅁 🅈  (W in green color)
+                        "W" is in the word and in the correct spot.
+                        
+                        🄿 🅸 🄻 🄻 🅂  (I in yellow color)
+                        
+                        🅅 🄰 🄶 🆄 🄴  (U in gray color)
 
                         Press OK and the game will begin""",
                 "Rules",
-                JOptionPane.INFORMATION_MESSAGE
+                JOptionPane.INFORMATION_MESSAGE,
+                icon
         );
 
 
