@@ -62,9 +62,8 @@ public class MainFrame extends JFrame{
     public MainFrame() {
         // Rules
         ImageIcon icon = new ImageIcon("./wordle.png");
-        JOptionPane.showMessageDialog(
-                panel1,
-                """
+
+        JOptionPane rules = new JOptionPane("""
                         You're supposed to guess the 5-letter word in 6 tries
 
                         Each guess must be a valid 5-letter word. Press the enter button to submit
@@ -78,15 +77,20 @@ public class MainFrame extends JFrame{
                         "W" is in the word and in the correct spot.
                         
                         🄿 🅸 🄻 🄻 🅂  (I in yellow color)
+                        "I" is in the word but in the wrong spot.
                         
                         🅅 🄰 🄶 🆄 🄴  (U in gray color)
+                        "U" is  not in the word at any spot.""");
 
-                        Press OK and the game will begin""",
-                "Rules",
-                JOptionPane.INFORMATION_MESSAGE,
-                icon
-        );
+        rules.setMessageType(JOptionPane.INFORMATION_MESSAGE);
+        rules.setIcon(icon);
 
+        JPanel buttonPanel = (JPanel) rules.getComponent(1);
+        JButton okButton = (JButton) buttonPanel.getComponent(0);
+        okButton.setText("Play");
+
+        JDialog dialog = rules.createDialog("Rules");
+        dialog.setVisible(true);
 
         // Main Background setup
         setContentPane(panel1);
