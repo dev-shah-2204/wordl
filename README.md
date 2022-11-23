@@ -1,5 +1,6 @@
 # Wordl
-Wordle but made for desktop and you can play more than one game in a day.
+Wordle but made for desktop and you can play more than one game in a day. <br>
+<img src="https://i.imgur.com/c7Fdnme.png">
 
 <br><br>
 #### Why I created this?<br>
